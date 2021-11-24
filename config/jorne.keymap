@@ -21,25 +21,25 @@
                 default_layer {
 // -----------------------------------------------------------------------------------------
 // | ESC |  ~  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  [  |  ] |
-//       | CTRL|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  | '  |
-//       | ALT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | \  |
+//       | CTRL|  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '  |
+//       | SHFT|  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |  \  |
 //                         | CMD | SHFT| LWR |   | RSE | SHFT | ALT |
                         bindings = <
     &kp ESC &kp GRAVE &kp Q &kp W &kp E &kp R &kp T            &kp Y &kp U &kp I     &kp O   &kp P    &kp LBKT &kp RBKT
             &kp LCTRL &kp A &kp S &kp D &kp F &kp G            &kp H &kp J &kp K     &kp L   &kp SEMI &kp SQT
-            &kp LALT  &kp Z &kp X &kp C &kp V &kp B            &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp BSLH
+            &kp LSHFT  &kp Z &kp X &kp C &kp V &kp B            &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp BSLH
                     &kp LWIN &mt LSHFT TAB &lt LWR SPACE   &lt LWR RET &mt RSHFT BSPC &kp RALT
                         >;
                 };
               lower_layer {
 // -----------------------------------------------------------------------------------------
 // |     |  _  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  -  |  +  |
-//       |     |  *  |  /  |  +  |  =  |  -  |   | LEFT| DOWN| UP  | RGHT|  .  |  ,  |
+//       |     |  *  |  /  |  +  |  =  |  -  |   | LEFT| DOWN| UP  | RGHT| HOME| END |
 //       |     |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |     |
 //                         | ADJ |     |     |   | ADJ |     | ADJ |
                         bindings = <
-   &trans &kp UNDER &kp N1           &kp N2       &kp N3      &kp N4       &kp N5           &kp N6    &kp N7   &kp N8   &kp N9    &kp N0  &kp MINUS &kp PLUS
-          &trans    &kp KP_MULTIPLY  &kp KP_SLASH &kp KP_PLUS &kp KP_EQUAL &kp KP_MINUS     &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &kp KP_DOT &kp KP_COMMA
+   &trans &kp UNDER &kp N1           &kp N2       &kp N3      &kp N4       &kp N5           &kp N6    &kp N7   &kp N8   &kp N9    &kp N0   &kp MINUS &kp PLUS
+          &trans    &kp KP_MULTIPLY  &kp KP_SLASH &kp KP_PLUS &kp KP_EQUAL &kp KP_MINUS     &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &kp HOME &kp END
           &trans    &kp EXCL         &kp AT       &kp HASH    &kp DLLR     &kp PRCNT        &kp CARET &kp AMPS &kp STAR &kp LPAR  &kp RPAR &none
                                                                    &mo ADJ &trans &trans   &lt ADJ RET &trans &mo ADJ
                         >;
@@ -53,20 +53,20 @@
 //                         | ADJ |     | ADJ |   |     |     | ADJ |
                         bindings = <
    &trans &kp UNDER &kp N1           &kp N2       &kp N3      &kp N4       &kp N5           &kp N6    &kp N7   &kp N8   &kp N9    &kp N0  &kp MINUS &kp PLUS
-          &trans    &kp KP_MULTIPLY  &kp KP_SLASH &kp KP_PLUS &kp KP_EQUAL &kp KP_MINUS     &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &kp KP_DOT &kp KP_COMMA
+          &trans    &kp KP_MULTIPLY  &kp KP_SLASH &kp KP_PLUS &kp KP_EQUAL &kp KP_MINUS     &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &kp HOME &kp END
           &trans    &kp EXCL         &kp AT       &kp HASH    &kp DLLR     &kp PRCNT        &kp CARET &kp AMPS &kp STAR &kp LPAR  &kp RPAR &none
                                                        &mo ADJ &trans &lt ADJ SPACE   &trans &trans &mo ADJ
                         >;
                 };
                 adjust_layer {
 // -----------------------------------------------------------------------------------------------
-// | RST | RGBTOG| BT0 | BT1 | BT2 | BT3  | BT4 |   | BT4 | BT3  | BT2 | BT1 | BT0 | RGBTOG| RST |
-// |     | MOD+  | HUE+| SAT+| VAL+|      | BLDR|   | BLDR|      | VAL+| SAT+| HUE+| MOD+  |
+// | RST | RGBTOG|     |     |     |      |     |   |     |      |     |     |     | RGBTOG| RST |
+// |     | MOD+  | HUE+| SAT+| VAL+|      |     |   |     |      | VAL+| SAT+| HUE+| MOD+  |
 //       | MOD-  | HUE-| SAT-| VAL-|      |     |   |     |      | VAL-| SAT-| HUE-| MOD-  |
 //                           |     | BTCLR|     |   |     | BTCLR|     |
                         bindings = <
-   &reset &rgb_ug RGB_TOG  &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2    &bt BT_SEL 1    &bt BT_SEL 0    &rgb_ug RGB_TOG &reset
-          &rgb_ug RGB_EFF  &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &none        &bootloader    &bootloader  &none        &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF
+   &reset &rgb_ug RGB_TOG  &trans          &trans          &trans          &trans        &trans         &trans       &trans       &trans          &trans          &trans          &trans          &reset
+          &rgb_ug RGB_EFF  &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &none        &none          &none        &none        &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF
           &rgb_ug RGB_EFR  &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &none        &none          &none        &none        &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR
                                                                         &trans &bt BT_CLR &trans         &trans &bt BT_CLR &trans
                         >;
